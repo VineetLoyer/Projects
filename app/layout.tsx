@@ -22,8 +22,10 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
-          {children}
-          <Footer />
+          <div className="min-h-screen flex flex-col">
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

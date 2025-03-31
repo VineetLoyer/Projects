@@ -50,12 +50,6 @@ export function ProjectsPage() {
           </div>
         </section>
       </main>
-
-      <footer className="border-t border-gray-800 mt-20 py-6 px-4">
-        <div className="container mx-auto">
-          <p className="text-gray-400">© 2025 Vineet Kumar Loyer. All Rights Reserved.</p>
-        </div>
-      </footer>
     </div>
   )
 }
