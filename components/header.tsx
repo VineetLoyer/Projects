@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header className="border-b border-gray-800 py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold">
+        <Link href="https://vineetloyer.github.io/VineetKumarLoyer/" className="text-2xl font-bold">
           Vineet Kumar Loyer
         </Link>
         <nav>
