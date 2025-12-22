@@ -1,11 +1,15 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Instrument_Serif } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Footer } from "@/components/footer"
 
-const inter = Inter({ subsets: ["latin"] })
+const instrumentSerif = Instrument_Serif({ 
+  weight: "400",
+  subsets: ["latin"],
+  style: ["normal", "italic"]
+})
 
 export const metadata: Metadata = {
   title: "Projects Portfolio",
@@ -20,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={inter.className}>
+      <body className={instrumentSerif.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <div className="min-h-screen flex flex-col">
             {children}
@@ -34,4 +38,3 @@ export default function RootLayout({
 
 
 
-import './globals.css'

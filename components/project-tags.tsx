@@ -14,8 +14,10 @@ export function ProjectTags({ selectedTag, onSelectTag }: ProjectTagsProps) {
       <button
         onClick={() => onSelectTag("All")}
         className={cn(
-          "px-4 py-2 rounded-full text-sm font-medium transition-colors",
-          selectedTag === "All" ? "bg-indigo-600 text-white" : "bg-gray-800 text-gray-300 hover:bg-gray-700",
+          "px-4 py-2 rounded-full text-sm font-medium transition-all border",
+          selectedTag === "All"
+            ? "bg-white/20 backdrop-blur-md border-white/40 text-white"
+            : "bg-white/10 backdrop-blur-md border-white/20 text-white/80 hover:bg-white/20 hover:border-white/30",
         )}
       >
         All
@@ -25,8 +27,10 @@ export function ProjectTags({ selectedTag, onSelectTag }: ProjectTagsProps) {
           key={tag}
           onClick={() => onSelectTag(tag)}
           className={cn(
-            "px-4 py-2 rounded-full text-sm font-medium transition-colors",
-            selectedTag === tag ? "bg-indigo-600 text-white" : "bg-gray-800 text-gray-300 hover:bg-gray-700",
+            "px-4 py-2 rounded-full text-sm font-medium transition-all border",
+            selectedTag === tag
+              ? "bg-white/20 backdrop-blur-md border-white/40 text-white"
+              : "bg-white/10 backdrop-blur-md border-white/20 text-white/80 hover:bg-white/20 hover:border-white/30",
           )}
         >
           {tag}
@@ -35,4 +39,3 @@ export function ProjectTags({ selectedTag, onSelectTag }: ProjectTagsProps) {
     </div>
   )
 }
-
