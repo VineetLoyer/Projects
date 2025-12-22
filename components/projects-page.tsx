@@ -5,7 +5,6 @@ import { Header } from "@/components/header"
 import { ProjectCard } from "@/components/project-card"
 import { ProjectTags } from "@/components/project-tags"
 import { projects } from "@/data/projects"
-import { ProjectSlider } from "@/components/project-slider"
 
 export function ProjectsPage() {
   const [selectedTag, setSelectedTag] = useState("All")
@@ -15,35 +14,26 @@ export function ProjectsPage() {
     return selectedTag === "All" || project.tags.includes(selectedTag)
   })
 
-  // Get featured projects
-  const featuredProjects = projects.filter((project) => project.featured)
-
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen text-white">
+      {/* Dynamic Background */}
+      <div className="dynamic-bg-wrapper">
+        <div className="dynamic-bg" />
+      </div>
+
       <Header />
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="relative z-10 max-w-[1200px] mx-auto px-4 py-8 pt-24 pb-8">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-indigo-400 mb-4">Projects</h1>
-          <p className="text-xl text-gray-300">
-            Explore my portfolio of data science and software engineering projects
-          </p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal italic text-white mb-4">Projects</h1>
         </div>
 
         <div className="mb-8">
           <ProjectTags selectedTag={selectedTag} onSelectTag={setSelectedTag} />
         </div>
 
-        {featuredProjects.length > 0 && (
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8">Featured Projects</h2>
-            <ProjectSlider projects={featuredProjects} />
-          </section>
-        )}
-
         <section>
-          <h2 className="text-3xl font-bold mb-8">All Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}

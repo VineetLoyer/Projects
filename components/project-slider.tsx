@@ -33,7 +33,7 @@ export function ProjectSlider({ projects }: ProjectSliderProps) {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {projects.map((project) => (
-          <div key={project.id} className="min-w-[320px] md:min-w-[400px] snap-start">
+          <div key={project.id} className="min-w-[280px] md:min-w-[320px] snap-start">
             <ProjectCard project={project} />
           </div>
         ))}
