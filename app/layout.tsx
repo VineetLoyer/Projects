@@ -73,7 +73,7 @@ const jsonLd = {
   },
   knowsAbout: ['Python', 'AWS', 'Spark', 'SQL', 'Machine Learning', 'Data Engineering', 'ETL', 'Big Data'],
   sameAs: [
-    'https://vineetloyer.github.io/VineetKumarLoyer/',
+    'https://vineetloyer.github.io',
     'https://www.linkedin.com/in/vineet-loyer/',
     'https://github.com/vineetloyer'
   ],

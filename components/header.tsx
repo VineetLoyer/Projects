@@ -18,7 +18,7 @@ export function Header() {
           {/* Logo */}
           <div className="text-white">
             <h1 className="text-lg md:text-xl lg:text-2xl m-0">
-              <Link href="https://vineetloyer.github.io/VineetKumarLoyer/" className="text-white no-underline hover:text-white">
+              <Link href="https://vineetloyer.github.io" className="text-white no-underline hover:text-white">
                 Vineet Kumar Loyer
               </Link>
             </h1>
@@ -27,7 +27,7 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-8">
             <Link 
-              href="https://vineetloyer.github.io/VineetKumarLoyer/" 
+              href="https://vineetloyer.github.io" 
               className="text-white no-underline text-base lg:text-lg transition-colors duration-300 hover:text-[#4A90E2]"
             >
               Home
@@ -73,7 +73,7 @@ export function Header() {
           } md:hidden absolute top-full left-0 w-full bg-black/90 py-4 flex-col items-center gap-4`}
         >
           <Link 
-            href="https://vineetloyer.github.io/VineetKumarLoyer/" 
+            href="https://vineetloyer.github.io" 
             className="text-white no-underline text-base py-2 transition-colors duration-300 hover:text-[#4A90E2]"
             onClick={() => setIsMenuOpen(false)}
           >
