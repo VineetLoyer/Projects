@@ -14,7 +14,7 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL('https://vineet-loyer-projects.vercel.app'),
   title: 'Vineet Kumar Loyer | Software Engineer',
-  description: 'Portfolio of Vineet Kumar Loyer.',
+  description: 'Software Engineer specializing in Data Science, Machine Learning, and Big Data. USC Applied Data Science graduate. Skilled in Python, AWS, Spark, SQL, and ETL pipelines.',
   keywords: [
     'Vineet Kumar Loyer',
     'Vineet Loyer',
@@ -44,20 +44,39 @@ export const metadata: Metadata = {
     url: 'https://vineet-loyer-projects.vercel.app',
     siteName: 'Vineet Kumar Loyer Portfolio',
     title: 'Vineet Kumar Loyer | Software Engineer',
-    description: 'Portfolio of Vineet Kumar Loyer.',
+    description: 'Software Engineer specializing in Data Science, Machine Learning, and Big Data. USC Applied Data Science graduate.',
   },
   twitter: {
     card: 'summary',
     title: 'Vineet Kumar Loyer | Software Engineer',
-    description: 'Portfolio of Vineet Kumar Loyer.',
+    description: 'Software Engineer specializing in Data Science, Machine Learning, and Big Data. USC Applied Data Science graduate.',
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: '/public/favicon.ico',
+    icon: '/favicon.ico',
   },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Vineet Kumar Loyer',
+  url: 'https://vineet-loyer-projects.vercel.app',
+  jobTitle: 'Software Engineer',
+  description: 'Software Engineer specializing in Data Science, Machine Learning, and Big Data technologies. USC Applied Data Science graduate based in Los Angeles.',
+  alumniOf: {
+    '@type': 'Organization',
+    name: 'University of Southern California',
+  },
+  knowsAbout: ['Python', 'AWS', 'Spark', 'SQL', 'Machine Learning', 'Data Engineering', 'ETL', 'Big Data'],
+  sameAs: [
+    'https://vineetloyer.github.io/VineetKumarLoyer/',
+    'https://www.linkedin.com/in/vineet-loyer/',
+    'https://github.com/vineetloyer'
+  ],
 }
 
 export default function RootLayout({
@@ -67,6 +86,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={instrumentSerif.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <div className="min-h-screen flex flex-col">
