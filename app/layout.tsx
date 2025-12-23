@@ -12,9 +12,52 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "Projects Portfolio",
-  description: "Explore my portfolio of projects",
-    generator: 'v0.dev'
+  metadataBase: new URL('https://vineet-loyer-projects.vercel.app'),
+  title: 'Vineet Kumar Loyer | Software Engineer',
+  description: 'Portfolio of Vineet Kumar Loyer.',
+  keywords: [
+    'Vineet Kumar Loyer',
+    'Vineet Loyer',
+    'Loyer',
+    'Software Engineer',
+    'Data Scientist',
+    'Data Engineer',
+    'Machine Learning Engineer',
+    'ML Engineer',
+    'Python Developer',
+    'AWS',
+    'Spark',
+    'SQL',
+    'Data Pipeline',
+    'ETL',
+    'Big Data',
+    'USC',
+    'Los Angeles',
+    'Data Science',
+    'Portfolio'
+  ],
+  authors: [{ name: 'Vineet Kumar Loyer' }],
+  creator: 'Vineet Kumar Loyer',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://vineet-loyer-projects.vercel.app',
+    siteName: 'Vineet Kumar Loyer Portfolio',
+    title: 'Vineet Kumar Loyer | Software Engineer',
+    description: 'Portfolio of Vineet Kumar Loyer.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Vineet Kumar Loyer | Software Engineer',
+    description: 'Portfolio of Vineet Kumar Loyer.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: '/public/favicon.ico',
+  },
 }
 
 export default function RootLayout({
